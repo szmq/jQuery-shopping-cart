@@ -1,0 +1,59 @@
+/* reset */
+div, span, h1, h2, h3, h4, h5, h6, p, a, em, img, small, strong, sub, sup, b, i, ol, ul, li, label, table, tbody, tfoot, thead, tr, th, td {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;-webkit-margin-before: 0;-webkit-margin-after: 0;-webkit-margin-start: 0;-webkit-margin-end: 0;-webkit-padding-start: 0;}
+ol, ul {list-style: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+img {max-width: 100%;}
+
+/* all */
+* {
+    font-size: 14px;
+    font-family: 'Verdana', sans-serif;
+}
+::selection {
+    background: red;
+    color: #fff
+}
+::-moz-selection {
+    background: red;
+    color: #fff
+}
+a,
+a:hover,
+a:focus,
+a:link,
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+.wrapper {
+    background: #fff;
+    margin: 0 auto;
+}
+
+body{
+    margin: 0;
+}
+
+/* IO */
+.orangeitem {
+    display: block;
+    margin: 15px auto;
+    text-align: center;
+}
+.orangeitem a {
+    display: inline-block;
+}
+.orangeitem a img {
+    -webkit-filter: grayscale(1);
+    -webkit-transition: all 0.5s;
+
+    filter: grayscale(1);
+    opacity: 0.4;
+    transition: all 0.5s;
+}
+.orangeitem a:hover img {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+    opacity: 1;
+}
