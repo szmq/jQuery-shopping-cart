@@ -11,6 +11,7 @@ var dist = './dist/';
 var paths = {
     sass: src + './sass/*.scss',
     js: src + './js/*.js',
+    json: src + './json/*.json',
     html: src + './*.html'
 };
 
@@ -35,6 +36,13 @@ gulp.task('js', function() {
         .src(paths.js)
         .pipe(concat("script.js"))
         .pipe(gulp.dest(dist + './js'));
+});
+
+gulp.task('json', function() {
+    gulp
+        .src(paths.json)
+        .pipe(concat("shopping-cart.json"))
+        .pipe(gulp.dest(dist + './json'));
 });
 
 gulp.task('sass-compile', function(){
@@ -66,12 +74,17 @@ gulp.task('watch', function(){
         .on('change', function(event) {
       console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
     });
+    gulp
+        .watch(paths.json, ['json'])
+        .on('change', function(event) {
+      console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+    });
 });
 
 gulp.task('default', ['watch']);
 
 // production task
-gulp.task('prod', ['html', 'js'], function(){
+gulp.task('prod', ['html', 'js', 'json'], function(){
     return gulp
         .src(paths.sass)
         .pipe(sass({outputStyle: 'compressed'}))
