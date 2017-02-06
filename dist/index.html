@@ -7,21 +7,23 @@
     <meta name="author" content="Szymon Ryczek">
 
     <link rel="stylesheet" href="css/normalize.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body class="text-center">
-    <section class="shopping-cart">
-        <h1 class="shopping-cart__header">Shopping cart</h1>
+    <section class="shopping-cart orange lighten-3">
+        <h1 class="shopping-cart__header teal-text lighten-2">Shopping cart</h1>
 
         <ul class="elements-list">
         </ul>
 
         <div class="text-center">
             <input class="input-element" placeholder="Something..." type="text" name="add">
-            <button class="add-button">Add</button>
-            <button class="get-pdf">Get PDF</button>
+            <button class="add-button waves-effect waves-light btn">Add</button>
+            <button class="get-pdf waves-effect waves-light btn">Get PDF</button>
             <p class="json-place"></p>
             <p class="error-place"></p>
         </div>

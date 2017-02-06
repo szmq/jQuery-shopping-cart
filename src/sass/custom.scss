@@ -9,13 +9,22 @@
     width: 330px;
     padding: 5px 0px;
     text-align: left;
-    background-color: #5e533d;
     box-shadow: 0px 0px 18px -1px rgba(0,0,0,0.54);
+    
+    .input-element{
+        padding-left: 5px;
+        width: 90%;
+        color: #ff6d00;
+        
+        &::placeholder{
+            color: #ff9100;
+        }
+    }
 }
 
 .shopping-cart__header{
     color: #AD9595;
-    padding: 10px 2px 20px 12px;
+    padding: 10px 2px 0px 12px;
     font-size: 2em;
 }
 
@@ -26,13 +35,23 @@
 }
 
 .elements-list__element{
-    color: #a3a3a3;
+    color: #ff9800;
     font-size: 1.5em;
     word-wrap: break-word;
     margin: 10px;
     padding: 5px 10px;
     box-shadow: 0px 0px 18px -1px rgba(0,0,0,0.54);
     position: relative;
+    
+    span{
+        color: #e65100;
+        
+        &:hover{
+            color: #fb8c00;
+            transition: color 0.2s;
+            font-color: 1.4em;
+        }
+    }
 }
 
 .elements-list__element-remove{
@@ -47,7 +66,11 @@
     height: 30px;
     font-size: 1.1em;
     font-weight: 700;
-    color: #f44336;
+    color: #e65100;
+}
+
+.add-button{
+    background-color: #f57c00;
 }
 
 .add-button, .input-element{
@@ -55,8 +78,4 @@
     background-color: transparent;
     color: #AD9595;
     outline: none;
-}
-
-.input-element{
-    padding-left: 5px;
 }
