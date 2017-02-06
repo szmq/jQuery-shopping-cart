@@ -18,13 +18,16 @@ var app = new function(){
         };
         
         $(this.addButton).on("click", function(){
-           
             if(self.checkValid()){
                 self.elementsArray.push(self.inputElement.val());
                 self.ElementsList
                     .append("<li class='elements-list__element'>"
                     + self.elementsArray[self.elementsArray.length-1]
-                    + "</li>");
+                    + "<span class='elements-list__element-remove'>x</span></li>");
+            
+                $(self.ElementsList).find("span").unbind().click(function(){
+                    $(this).parent().remove();
+                });
             }
         });
         
@@ -33,6 +36,7 @@ var app = new function(){
                 $(self.addButton).click();
             }
         });
+        
     };
     
     this.checkValid = function(){
