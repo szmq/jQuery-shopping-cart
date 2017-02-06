@@ -1,0 +1,54 @@
+.text-center {
+  text-align: center;
+}
+
+.shopping-cart {
+  margin-top: 5vh;
+  display: inline-block;
+  padding: 20px 0;
+  width: 330px;
+  padding: 5px 0px;
+  text-align: left;
+  background-color: #5e533d;
+  box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.54);
+}
+
+.shopping-cart__header {
+  color: #AD9595;
+  padding: 10px 2px 20px 12px;
+  font-size: 2em;
+}
+
+.elements-list {
+  padding: 5px 2px;
+  list-style: none;
+  text-align: left;
+}
+
+.elements-list__element {
+  color: #a3a3a3;
+  font-size: 1.5em;
+  word-wrap: break-word;
+  margin: 10px;
+  padding: 5px 10px;
+  box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.54);
+}
+
+.error-place {
+  margin-top: 15px;
+  height: 30px;
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #f44336;
+}
+
+.add-button, .input-element {
+  font-size: 1.4em;
+  background-color: transparent;
+  color: #AD9595;
+  outline: none;
+}
+
+.input-element {
+  padding-left: 5px;
+}

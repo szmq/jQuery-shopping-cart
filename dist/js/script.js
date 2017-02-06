@@ -22,7 +22,7 @@ var app = new function(){
             if(self.checkValid()){
                 self.elementsArray.push(self.inputElement.val());
                 self.ElementsList
-                    .append("<li class='ElementsList__element'>"
+                    .append("<li class='elements-list__element'>"
                     + self.elementsArray[self.elementsArray.length-1]
                     + "</li>");
             }
