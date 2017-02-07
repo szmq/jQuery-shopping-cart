@@ -7,7 +7,7 @@ var app = new function(){
     
     this.init = function(){
         this.elementsArray = [];
-        this.jsonFile = "../json/shopping-cart.json";
+        this.jsonFile = "./json/shopping-cart.json";
         
         this.addButton = $(".add-button");
         this.inputElement = $(".input-element");
@@ -56,7 +56,7 @@ var app = new function(){
             self.ElementsList
                 .append("<li class='elements-list__element'>"
                 + self.elementsArray[self.elementsArray.length-1]
-                + "<span class='elements-list__element-remove'>x</span></li>");
+                + "<span class='elements-list__element-remove'>x</span></li>").children().last().hide().show(400);
 
         $(self.ElementsList).find("span").unbind().click(function(){
             var strParentx = $(this).parent().text(); // get parent text with span x
@@ -65,7 +65,7 @@ var app = new function(){
             var index = $.inArray(strParent, self.elementsArray);
             self.elementsArray.splice(index, 1);
 
-            $(this).parent().remove();
+            $(this).parent().hide(400);
         });
     };
     
@@ -77,15 +77,15 @@ var app = new function(){
     
     this.checkValid = function(){
         if($.inArray(self.inputElement.val(), self.elementsArray) !== -1){
-            self.errorPlace.html(self.errorPlaceMessage.itemExist);
+            self.errorPlace.html(self.errorPlaceMessage.itemExist).hide().fadeIn(400);
             return false;
         }
         else if(self.inputElement.val() == ""){
-            self.errorPlace.html(self.errorPlaceMessage.itemEmpty);
+            self.errorPlace.html(self.errorPlaceMessage.itemEmpty).hide().fadeIn(400);;
             return false;
         }
         else{
-            self.errorPlace.empty();
+            self.errorPlace.fadeOut(400);
             return true;
         }
     };

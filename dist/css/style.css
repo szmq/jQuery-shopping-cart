@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700&subset=latin-ext");
 .text-center {
   text-align: center;
 }
@@ -10,6 +11,7 @@
   padding: 5px 0px;
   text-align: left;
   box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.54);
+  font-family: 'Lato', sans-serif;
 }
 
 .shopping-cart .input-element {
@@ -58,12 +60,12 @@
 
 .elements-list__element span {
   color: #e65100;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
 }
 
 .elements-list__element span:hover {
   color: #fb8c00;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
   font-color: 1.4em;
 }
 
@@ -74,9 +76,12 @@
   cursor: pointer;
 }
 
-.error-place {
+.holder-error-place {
+  min-height: 30px;
   margin-top: 15px;
-  height: 30px;
+}
+
+.error-place {
   font-size: 1.1em;
   font-weight: 700;
   color: #e65100;
