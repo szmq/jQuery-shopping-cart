@@ -1,7 +1,3 @@
-$(document).ready(function(){
-   App.init();
-});
-
 var App = new function(){
     var self = this;
 
@@ -98,4 +94,4 @@ var App = new function(){
     };
 };
 
-
+module.exports = App;

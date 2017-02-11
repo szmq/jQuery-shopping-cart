@@ -4,13 +4,14 @@ var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var sassdoc = require('sassdoc');
 var concat = require('gulp-concat');
+var replace = require('gulp-replace');
 
 var src = './src/';
 var dist = './dist/';
 
 var paths = {
     sass: src + './sass/*.scss',
-    js: src + './js/*.js',
+    js: src + './js/**/*.js',
     json: src + './json/*.json',
     html: src + './*.html'
 };
@@ -35,6 +36,11 @@ gulp.task('js', function() {
     gulp
         .src(paths.js)
         .pipe(concat("script.js"))
+        //.pipe(browserify({
+        //  insertGlobals : true,
+        //  debug : !gulp.env.production
+        //}))
+        .pipe(replace(/module.exports = [^\n]*/g, ''))
         .pipe(gulp.dest(dist + './js'));
 });
 
